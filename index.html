@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Assistant - RAG Q&A</title>
+   <!-- link css  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1>AskNova</h1>
+            <p> Upload your PDF. Ask anything. Get Answers.</p>
+        </div>
+        <div class="content">
+            <!-- upload section -->
+            <div class="upload-section" id="uploadSection">
+                <input type="file" id="fileInput" accept=".pdf" style="display: none;">
+                <button class="upload-btn" onclick="document.getElementById('fileInput').click()"> Upload PDF</button>
+             
+                <div id="fileInfo" class="file-info" style="display: none;"></div>
+                <div id="uploadStatus"></div>
+            </div>
+            <!-- chat section -->
+            <div class="chat-section" id="chatSection" style="display: none;">
+                <div class="chat-box" id="chatBox"> </div>
+                
+                <div class="input-area">
+                    <input type="text" 
+                    id="questionInput" 
+                    placeholder="Ask Question"
+                    onkeypress="if(event.key==='Enter')askQuestion()">
+                    <button class="send-btn"  onclick="askQuestion()">Send</button>
+                    
+                </div>
+                <button class="reset-btn" onclick="resetApp()">
+                    Upload New Document
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
