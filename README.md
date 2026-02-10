@@ -18,6 +18,19 @@
 
 ---
 
+## 🧠 Why RAG (Retrieval-Augmented Generation)?
+
+Unlike a standard LLM chatbot that relies on its training data (which might be outdated or incorrect), **AskNova uses RAG to ensure accuracy.**
+
+1.  **Retrieval**: When you ask a question, the app searches through your uploaded document to find the most relevant chunks of text.
+2.  **Augmentation**: Those relevant chunks are sent to the LLM (Gemini) along with your question.
+3.  **Generation**: The LLM generates an answer based **only** on the context provided.
+
+### 🚫 Anti-Hallucination Guardrail
+Because the LLM is restricted to the text in your document, it cannot fabricate information. If the answer is not in the document, it will tell you, ensuring trustworthy results for technical research.
+
+---
+
 ## 🏗️ Architecture
 
 ```mermaid
